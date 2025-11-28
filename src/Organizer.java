@@ -1,5 +1,4 @@
 public class Organizer extends User{
-    private String department;
 
     public Organizer(String userID, String name, String email) {
         super(userID, name, email);
@@ -7,12 +6,9 @@ public class Organizer extends User{
 
     @Override
     public void displayInfo() {
-
+        System.out.println("Organizer : "+
+                "\nID : "+getUserID()+
+                "\nName : "+getName()+
+                "\nEmail : "+getEmail());
     }
-
-    public String getDepartment() {
-        return department;
-    }
-
-
 }
