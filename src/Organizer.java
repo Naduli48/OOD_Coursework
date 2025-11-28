@@ -4,4 +4,15 @@ public class Organizer extends User{
     public Organizer(String userID, String name, String email) {
         super(userID, name, email);
     }
+
+    @Override
+    public void displayInfo() {
+
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+
 }

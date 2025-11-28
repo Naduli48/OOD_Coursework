@@ -9,5 +9,18 @@ public abstract class User {
         this.email = email;
     }
 
+    public String getUserID() {
+        return userID;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    //abstract method
+    public abstract void displayInfo();
 }

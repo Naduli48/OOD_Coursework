@@ -5,4 +5,9 @@ public class Participant extends User{
     public Participant(String userID, String name, String email) {
         super(userID, name, email);
     }
+
+    @Override
+    public void displayInfo() {
+        System.out.println();
+    }
 }
