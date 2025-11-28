@@ -12,3 +12,4 @@ public class Organizer extends User{
                 "\nEmail : "+getEmail());
     }
 }
+

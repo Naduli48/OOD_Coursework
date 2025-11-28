@@ -49,3 +49,4 @@ public class Participant extends User{
         return getUserID()+getName()+getEmail()+preferredGame+preferredRole+skillLevel+personalityType+personalityScore;
     }
 }
+

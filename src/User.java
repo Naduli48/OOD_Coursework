@@ -24,3 +24,4 @@ public abstract class User {
     //abstract method
     public abstract void displayInfo();
 }
+
