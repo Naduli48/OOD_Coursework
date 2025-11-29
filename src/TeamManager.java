@@ -1,67 +1,93 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.logging.Logger;
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.*;
 
 public class TeamManager {
-    private static final Logger logger = LoggerUtil.getLogger("TeamMateLogger");
-    private int teamSize;
-    private List<Participant> participants;
 
-    public TeamManager(int teamSize, List<Participant> list) {
-        this.teamSize = teamSize;
-        this.participants = list;
+    private List<Participant> participants = new ArrayList<>();
+    private static final java.util.logging.Logger logger =
+            LoggerUtil.getLogger("TeamMateLogger");
+
+    // ------------------ Load CSV ------------------
+    public void loadCSV(String filename) throws FileProcessingException {
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+
+            String header = br.readLine(); // Skip header
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                String[] d = line.split(",");
+
+                participants.add(new Participant(
+                        d[0], d[1], d[2],
+                        d[3], Integer.parseInt(d[4]),
+                        d[5], Integer.parseInt(d[6]),
+                        d[7]
+                ));
+            }
+
+            logger.info("CSV loaded: " + participants.size() + " participants");
+
+        } catch (Exception e) {
+            throw new FileProcessingException("CSV load failed: " + e.getMessage());
+        }
     }
 
-    public List<Team> manageTeams(){
-        ExecutorService executor = Executors.newFixedThreadPool(3);
-        // This block uses multithreading to form teams in parallel.
-        // Instead of forming each team one-by-one (slow), we submit each team formation
-        // task to the ExecutorService, which runs them on multiple threads.
-        // Each submitted task returns a Future<Team> which represents a "result that will arrive later".
-        // This improves performance when dealing with large datasets.
+    // ------------------ Split participants ------------------
+    private List<List<Participant>> createChunks(int size) {
+        List<List<Participant>> chunks = new ArrayList<>();
+
+        for (int i = 0; i < participants.size(); i += size) {
+            int end = Math.min(i + size, participants.size());
+            chunks.add(participants.subList(i, end));
+        }
+
+        return chunks;
+    }
+
+    // ------------------ Form Team ------------------
+    private Team buildTeam(List<Participant> group, String name) {
+        Team t = new Team(name);
+        for (Participant p : group) {
+            t.addParticipant(p);
+        }
+        logger.info(name + " formed.");
+        return t;
+    }
+
+    // ------------------ Concurrency Team Formation ------------------
+    public List<Team> formTeams(int teamSize)
+            throws TeamFormationException {
+
+        ExecutorService exec = Executors.newFixedThreadPool(4);
         List<Future<Team>> futures = new ArrayList<>();
         List<Team> teams = new ArrayList<>();
 
-        Collections.shuffle(participants);
+        List<List<Participant>> chunks = createChunks(teamSize);
 
-        int totalTeams = participants.size() / teamSize;
+        for (int i = 0; i < chunks.size(); i++) {
 
-        logger.info("Forming"+totalTeams+"teams");
-
-        for (int i=0; i < totalTeams; i++){
-            int start = i * teamSize;
-            int end = start + teamSize;
-
-            List<Participant> subset = participants.subList(start,end);
+            final int index = i;
+            List<Participant> chunk = chunks.get(i);
 
             futures.add(
-                    executor.submit(() -> formTeam(subset, "Team" + (i + 1)))
+                    exec.submit(() -> buildTeam(chunk, "Team_" + (index + 1)))
             );
         }
 
-        for (Future<Team> f : futures){
-            try{
+        for (Future<Team> f : futures) {
+            try {
                 teams.add(f.get());
-            }catch (Exception e){
-                logger.warning("Team formation failed");
+            } catch (Exception e) {
+                throw new TeamFormationException("Team formation error");
             }
         }
 
-        executor.shutdown();
+        exec.shutdown();
         return teams;
     }
 
-    private Team formTeam(List<Participant> group, String teamID){
-        Team team = new Team(teamID);
-        for (Participant p : group){
-            team.addParticipant(p);
-        }
-        logger.info(teamID+"created");
-        return team;
+    public List<Participant> getParticipants() {
+        return participants;
     }
 }
-

@@ -2,10 +2,19 @@ import java.io.IOException;
 import java.util.logging.*;
 
 public class LoggerUtil {
-    //initialize the static logger instance
-    private static Logger logger = Logger.getLogger("TeamMateLogger");
+    private static Logger logger;
 
-    static{
+    //Return a shared, properly configured logger instance
+    public static Logger getLogger(String name){
+        if (logger == null){
+            logger = Logger.getLogger(name);
+            setupLogger();
+        }
+        return logger;
+    }
+
+    //configure file logging(Teammate.log)
+    private static void setupLogger(){
         try{
             //Reset existing configuration and setup file handler
             LogManager.getLogManager().reset();
@@ -17,12 +26,8 @@ public class LoggerUtil {
             logger.setLevel(Level.ALL);
 
         }catch (IOException e){
-            System.err.println("Logger setup failed");
+            System.err.println("Logger setup failed"+e.getMessage());
         }
-    }
-
-    public static Logger getLogger(String teamMateLogger){
-        return logger;
     }
 }
 

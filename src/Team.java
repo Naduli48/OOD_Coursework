@@ -32,13 +32,14 @@ public class Team {
         for (Participant p : participants){
             total += p.getSkillLevel();
         }
+        return total/participants.size();
+    }
 
-        //calculate average skill level
-        int avg = total/participants.size();
-        return avg;
-
-
-
+    public void displayTeam(){
+        System.out.println(teamID);
+        for (Participant p : participants){
+            System.out.println(p.getName()+"Role : "+p.getPreferredRole()+"Game : "+p.getPreferredGame());
+        }
     }
 }
 

@@ -1,33 +1,24 @@
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
-    private static final LoggerUtil LOGGER_UTIL = LoggerUtil.getLogger("TeamMateLogger");
+    public static void main(String[] args) {
 
-    public static void main(String[] args){
-        try{
-            LOGGER_UTIL.info("TeamMate System Started");
+        TeamManager builder = new TeamManager();
 
-            Organizer organizer = new Organizer("ORD001","Event organizer", "organizer1@university.edu");
+        try {
+            builder.loadCSV("src/participants_sample.csv");
 
-            List<Participant> participants = CSVReader.load("participants_sample.csv");
+            int teamSize = 5; // Organizer-defined
 
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter team size");
-            int size = scanner.nextInt();
+            List<Team> teams = builder.formTeams(teamSize);
 
-            TeamManager tm = new TeamManager(size,participants);
-            List<Team> teams = tm.manageTeams();
+            System.out.println("\n==== TEAM LIST ====");
+            for (Team t : teams) {
+                t.displayTeam();
+            }
 
-            CSVWriter.saveTeams("Formed_teams.csv",teams);
-
-            System.out.println("Teams formed successfully");
-            LOGGER_UTIL.info("Process complete");
-
-        } catch (Exception e){
-            LOGGER_UTIL.warning("Error : ",e.getMessage());
-            System.out.println("An error occurred");
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
         }
     }
 }
-
