@@ -326,3 +326,35 @@ Nov 29, 2025 10:47:32 PM Main main
 INFO: Teams generated successfully.
 Nov 29, 2025 10:47:33 PM Main main
 INFO: Organizer viewed formed teams.
+Nov 30, 2025 12:18:43 AM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 30, 2025 12:18:43 AM Main main
+INFO: CSV loaded by organizer.
+Nov 30, 2025 12:18:49 AM Main main
+INFO: Organizer set team size to 11
+Nov 30, 2025 12:18:53 AM TeamManager createChunks
+INFO: Remaining participants: 1 moved to pool.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_3 formed.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_4 formed.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_2 formed.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_5 formed.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_6 formed.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_7 formed.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_1 formed.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_8 formed.
+Nov 30, 2025 12:18:53 AM TeamManager buildTeam
+INFO: Team_9 formed.
+Nov 30, 2025 12:18:53 AM TeamManager formTeams
+INFO: Pool_Team created with 1 participant(s)
+Nov 30, 2025 12:18:53 AM Main main
+INFO: Teams generated successfully.
+Nov 30, 2025 12:18:56 AM Main main
+INFO: Organizer viewed formed teams.

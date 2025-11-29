@@ -5,18 +5,20 @@ import java.util.concurrent.*;
 public class TeamManager {
 
     private List<Participant> participants = new ArrayList<>();
-    private List<Participant> remainingParticipants = new ArrayList<>(); // handle remaining players
-    private static final java.util.logging.Logger logger = LoggerUtil.getLogger("TeamMateLogger");
+    private List<Participant> remainingParticipants = new ArrayList<>();
+    private static final java.util.logging.Logger logger =
+            LoggerUtil.getLogger("TeamMateLogger");
 
-    //load csv file
+    //Load csv file
     public void loadCSV(String filename) throws FileProcessingException {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 
-            String header = br.readLine(); // Skip header
-            String line;
-            participants.clear(); //clear previous list
-            remainingParticipants.clear();  //Clear previous pool
+            br.readLine(); // skip header
 
+            participants.clear();
+            remainingParticipants.clear();
+
+            String line;
             while ((line = br.readLine()) != null) {
                 String[] d = line.split(",");
 
@@ -35,35 +37,45 @@ public class TeamManager {
         }
     }
 
-    //Split participants
+    //Create teams
     private List<List<Participant>> createChunks(int size) {
-        List<List<Participant>> chunks = new ArrayList<>();
+
+        List<List<Participant>> fullTeams = new ArrayList<>();
         remainingParticipants.clear();
 
-        int numParticipants = participants.size();
-        int numFullTeams = numParticipants/size;
-        int remainingStart = numFullTeams*size;   //Index where the remaining players start
+        int total = participants.size();
+        int fullTeamCount = total / size;
+        int remainderStartIndex = fullTeamCount * size;
 
-        //Create chun
-        for (int i = 0; i < participants.size(); i += size) {
-            int end = Math.min(i + size, participants.size());
-            chunks.add(participants.subList(i, end));
+        //create full teams
+        for (int i = 0; i < remainderStartIndex; i += size) {
+            fullTeams.add(participants.subList(i, i + size));
         }
 
-        return chunks;
+        //put remaining players into the pool
+        if (remainderStartIndex < total) {
+            remainingParticipants.addAll(
+                    participants.subList(remainderStartIndex, total)
+            );
+
+            logger.info("Remaining participants: " +
+                    remainingParticipants.size() + " moved to pool");
+        }
+
+        return fullTeams;
     }
 
-    //Form Team
+    //build team
     private Team buildTeam(List<Participant> group, String name) {
         Team t = new Team(name);
         for (Participant p : group) {
             t.addParticipant(p);
         }
-        logger.info(name + " formed.");
+        logger.info(name + " formed");
         return t;
     }
 
-    //Concurrency Team Formation
+    //concurrency
     public List<Team> formTeams(int teamSize)
             throws TeamFormationException {
 
@@ -71,24 +83,40 @@ public class TeamManager {
         List<Future<Team>> futures = new ArrayList<>();
         List<Team> teams = new ArrayList<>();
 
-        List<List<Participant>> chunks = createChunks(teamSize);
+        List<List<Participant>> fullChunks = createChunks(teamSize);
 
-        for (int i = 0; i < chunks.size(); i++) {
+        // Submit tasks to thread pool
+        for (int i = 0; i < fullChunks.size(); i++) {
 
             final int index = i;
-            List<Participant> chunk = chunks.get(i);
+            List<Participant> chunk = fullChunks.get(i);
 
             futures.add(
-                    exec.submit(() -> buildTeam(chunk, "\nTeam : " + (index + 1)+"\n"))
+                    exec.submit(() ->
+                            buildTeam(chunk, "\nTeam : " + (index + 1)+"\n"))
             );
         }
 
+        //collect results
         for (Future<Team> f : futures) {
             try {
                 teams.add(f.get());
             } catch (Exception e) {
                 throw new TeamFormationException("Team formation error");
             }
+        }
+
+        //create pool
+        if (!remainingParticipants.isEmpty()) {
+            Team pool = new Team("\nPool : \n");
+
+            for (Participant p : remainingParticipants) {
+                pool.addParticipant(p);
+            }
+
+            logger.info("Pool created with " +
+                    remainingParticipants.size() + " participant(s)");
+            teams.add(pool);
         }
 
         exec.shutdown();
