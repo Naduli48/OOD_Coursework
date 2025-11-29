@@ -5,15 +5,17 @@ import java.util.concurrent.*;
 public class TeamManager {
 
     private List<Participant> participants = new ArrayList<>();
-    private static final java.util.logging.Logger logger =
-            LoggerUtil.getLogger("TeamMateLogger");
+    private List<Participant> remainingParticipants = new ArrayList<>(); // handle remaining players
+    private static final java.util.logging.Logger logger = LoggerUtil.getLogger("TeamMateLogger");
 
-    // ------------------ Load CSV ------------------
+    //load csv file
     public void loadCSV(String filename) throws FileProcessingException {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 
             String header = br.readLine(); // Skip header
             String line;
+            participants.clear(); //clear previous list
+            remainingParticipants.clear();  //Clear previous pool
 
             while ((line = br.readLine()) != null) {
                 String[] d = line.split(",");
@@ -33,10 +35,16 @@ public class TeamManager {
         }
     }
 
-    // ------------------ Split participants ------------------
+    //Split participants
     private List<List<Participant>> createChunks(int size) {
         List<List<Participant>> chunks = new ArrayList<>();
+        remainingParticipants.clear();
 
+        int numParticipants = participants.size();
+        int numFullTeams = numParticipants/size;
+        int remainingStart = numFullTeams*size;   //Index where the remaining players start
+
+        //Create chun
         for (int i = 0; i < participants.size(); i += size) {
             int end = Math.min(i + size, participants.size());
             chunks.add(participants.subList(i, end));
@@ -45,7 +53,7 @@ public class TeamManager {
         return chunks;
     }
 
-    // ------------------ Form Team ------------------
+    //Form Team
     private Team buildTeam(List<Participant> group, String name) {
         Team t = new Team(name);
         for (Participant p : group) {
@@ -55,7 +63,7 @@ public class TeamManager {
         return t;
     }
 
-    // ------------------ Concurrency Team Formation ------------------
+    //Concurrency Team Formation
     public List<Team> formTeams(int teamSize)
             throws TeamFormationException {
 
@@ -71,7 +79,7 @@ public class TeamManager {
             List<Participant> chunk = chunks.get(i);
 
             futures.add(
-                    exec.submit(() -> buildTeam(chunk, "Team_" + (index + 1)))
+                    exec.submit(() -> buildTeam(chunk, "\nTeam : " + (index + 1)+"\n"))
             );
         }
 

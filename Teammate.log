@@ -52,3 +52,277 @@ Nov 29, 2025 8:10:53 PM TeamManager buildTeam
 INFO: Team_19 formed.
 Nov 29, 2025 8:10:53 PM TeamManager buildTeam
 INFO: Team_20 formed.
+Nov 29, 2025 9:26:15 PM Main main
+WARNING: CSV load failed.
+Nov 29, 2025 9:36:09 PM Main main
+WARNING: CSV load failed.
+Nov 29, 2025 9:36:22 PM Main main
+WARNING: CSV load failed.
+Nov 29, 2025 9:40:00 PM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 29, 2025 9:40:00 PM Main main
+INFO: CSV loaded by organizer.
+Nov 29, 2025 9:40:22 PM Main main
+INFO: Organizer set team size to 11
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_4 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_3 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_5 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_1 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_6 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_9 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_8 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_2 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_10 formed.
+Nov 29, 2025 9:40:59 PM TeamManager buildTeam
+INFO: Team_7 formed.
+Nov 29, 2025 9:40:59 PM Main main
+INFO: Teams generated successfully.
+Nov 29, 2025 9:41:05 PM Main main
+INFO: Organizer viewed formed teams.
+Nov 29, 2025 10:17:29 PM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 29, 2025 10:17:29 PM Main main
+INFO: CSV loaded by organizer.
+Nov 29, 2025 10:17:36 PM Main main
+INFO: Organizer set team size to 11
+Nov 29, 2025 10:17:39 PM Main main
+WARNING: Team formation failed.
+Nov 29, 2025 10:24:45 PM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 29, 2025 10:24:45 PM Main main
+INFO: CSV loaded by organizer.
+Nov 29, 2025 10:24:50 PM Main main
+INFO: Organizer set team size to 11
+Nov 29, 2025 10:24:54 PM Main main
+WARNING: Team formation failed.
+Nov 29, 2025 10:26:55 PM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 29, 2025 10:26:55 PM Main main
+INFO: CSV loaded by organizer.
+Nov 29, 2025 10:26:59 PM Main main
+INFO: Organizer set team size to 11
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_3 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_4 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_5 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_2 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_6 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_8 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_1 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_9 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_10 formed.
+Nov 29, 2025 10:27:01 PM TeamManager buildTeam
+INFO: Team_7 formed.
+Nov 29, 2025 10:27:01 PM Main main
+INFO: Teams generated successfully.
+Nov 29, 2025 10:27:03 PM Main main
+INFO: Organizer viewed formed teams.
+Nov 29, 2025 10:42:27 PM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 29, 2025 10:42:28 PM Main main
+INFO: CSV loaded by organizer.
+Nov 29, 2025 10:42:35 PM Main main
+INFO: Organizer set team size to 5
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_1 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_4 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_6 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_2 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_7 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_8 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_3 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_9 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_10 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_11 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_12 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_5 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_14 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_13 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_15 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_17 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_18 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_19 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_20 formed.
+Nov 29, 2025 10:42:44 PM TeamManager buildTeam
+INFO: Team_16 formed.
+Nov 29, 2025 10:42:44 PM Main main
+INFO: Teams generated successfully.
+Nov 29, 2025 10:42:46 PM Main main
+INFO: Organizer viewed formed teams.
+Nov 29, 2025 10:44:10 PM Main main
+WARNING: CSV load failed.
+Nov 29, 2025 10:44:50 PM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 29, 2025 10:44:50 PM Main main
+INFO: CSV loaded by organizer.
+Nov 29, 2025 10:44:57 PM Main main
+INFO: Organizer set team size to 5
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_4 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_3 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_1 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_5 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_6 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_7 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_2 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_8 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_9 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_13 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_10 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_12 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_11 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_14 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_15 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_16 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_17 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_18 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_20 formed.
+Nov 29, 2025 10:45:01 PM TeamManager buildTeam
+INFO: Team_19 formed.
+Nov 29, 2025 10:45:01 PM Main main
+INFO: Teams generated successfully.
+Nov 29, 2025 10:45:04 PM Main main
+INFO: Organizer viewed formed teams.
+Nov 29, 2025 10:47:24 PM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 29, 2025 10:47:24 PM Main main
+INFO: CSV loaded by organizer.
+Nov 29, 2025 10:47:28 PM Main main
+INFO: Organizer set team size to 5
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 3
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 4
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 1
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 5
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 6
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 7
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 9
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 8
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 10
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 2
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 12
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 14
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 13
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 16
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 17
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 15
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 11
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 18
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 19
+ formed.
+Nov 29, 2025 10:47:32 PM TeamManager buildTeam
+INFO: 
+Team : 20
+ formed.
+Nov 29, 2025 10:47:32 PM Main main
+INFO: Teams generated successfully.
+Nov 29, 2025 10:47:33 PM Main main
+INFO: Organizer viewed formed teams.
