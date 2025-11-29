@@ -358,3 +358,227 @@ Nov 30, 2025 12:18:53 AM Main main
 INFO: Teams generated successfully.
 Nov 30, 2025 12:18:56 AM Main main
 INFO: Organizer viewed formed teams.
+Nov 30, 2025 12:48:55 AM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 30, 2025 12:48:55 AM Main main
+INFO: CSV loaded by organizer.
+Nov 30, 2025 12:49:00 AM Main main
+INFO: Organizer set team size to 3
+Nov 30, 2025 12:49:04 AM TeamManager createChunks
+INFO: Remaining participants: 1 moved to pool
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 2
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 1
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 4
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 5
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 7
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 6
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 10
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 8
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 3
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 11
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 9
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 13
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 14
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 12
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 16
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 17
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 18
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 19
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 20
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 22
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 23
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 21
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 15
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 25
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 24
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 26
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 27
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 28
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 31
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 30
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 32
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 33
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager buildTeam
+INFO: 
+Team : 29
+ formed
+Nov 30, 2025 12:49:04 AM TeamManager formTeams
+INFO: Pool created with 1 participant(s)
+Nov 30, 2025 12:49:04 AM Main main
+INFO: Teams generated successfully.
+Nov 30, 2025 12:49:05 AM Main main
+INFO: Organizer viewed formed teams.
+Nov 30, 2025 12:52:55 AM TeamManager loadCSV
+INFO: CSV loaded: 100 participants
+Nov 30, 2025 12:52:55 AM Main main
+INFO: CSV loaded by organizer.
+Nov 30, 2025 12:53:00 AM Main main
+INFO: Organizer set team size to 6
+Nov 30, 2025 12:53:04 AM TeamManager createChunks
+INFO: Remaining participants: 4 moved to pool
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 4
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 5
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 1
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 2
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 7
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 8
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 9
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 10
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 3
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 6
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 14
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 12
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 15
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 13
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 11
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager buildTeam
+INFO: 
+Team : 16
+ formed
+Nov 30, 2025 12:53:04 AM TeamManager formTeams
+INFO: Pool created with 4 participant(s)
+Nov 30, 2025 12:53:04 AM Main main
+INFO: Teams generated successfully.
+Nov 30, 2025 12:53:06 AM Main main
+INFO: Organizer viewed formed teams.

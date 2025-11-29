@@ -38,7 +38,7 @@ public class Team {
     public void displayTeam(){
         System.out.println(teamID);
         for (Participant p : participants){
-            System.out.println(p.getName()+"Role : "+p.getPreferredRole()+"Game : "+p.getPreferredGame());
+            System.out.println(p.getName()+" | Role : "+p.getPreferredRole()+" | Game : "+p.getPreferredGame()+" | Score : "+p.getPersonalityScore()+" | type : "+p.getPersonalityType());
         }
     }
 }
