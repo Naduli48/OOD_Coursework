@@ -79,6 +79,9 @@ public class Main {
 
                     try {
                         formedTeams = builder.formTeams(teamSize);
+                        builder.saveTeamsToCSV(formedTeams, "formed_teams.csv");
+                        System.out.println("Teams saved to formed_teams.csv");
+
                         teamsGenerated = true;
 
                         System.out.println("\nTeams successfully generated");

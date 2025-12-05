@@ -123,6 +123,35 @@ public class TeamManager {
         return teams;
     }
 
+    public void saveTeamsToCSV(List<Team> teams, String filename) throws FileProcessingException {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
+
+            // Write header row
+            writer.println("TeamID,ParticipantID,Name,PreferredGame,SkillLevel,PreferredRole,PersonalityType");
+
+            // Write each team's members
+            for (Team team : teams) {
+                for (Participant p : team.getParticipants()) {
+                    writer.println(
+                            team.getTeamID() + "," +
+                                    p.getUserID() + "," +
+                                    p.getName() + "," +
+                                    p.getPreferredGame() + "," +
+                                    p.getSkillLevel() + "," +
+                                    p.getPreferredRole() + "," +
+                                    p.getPersonalityType()
+                    );
+                }
+            }
+
+            logger.info("Teams successfully saved to CSV: " + filename);
+
+        } catch (Exception e) {
+            throw new FileProcessingException("Failed to save teams CSV: " + e.getMessage());
+        }
+    }
+
+
     public List<Participant> getParticipants() {
         return participants;
     }
