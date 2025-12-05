@@ -41,7 +41,7 @@ public class Main {
                         logger.info("CSV loaded by organizer.");
 
                     } catch (Exception e) {
-                        System.out.println("CSV load failed: " + e.getMessage());
+                        System.out.println(e.getMessage());
                         logger.warning("CSV load failed.");
                     }
                     break;

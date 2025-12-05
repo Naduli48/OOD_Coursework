@@ -132,7 +132,7 @@ public class TeamManager {
             // Write each team's members
             for (Team team : teams) {
                 for (Participant p : team.getParticipants()) {
-                    writer.println(
+                    writer.print(
                             team.getTeamID() + "," +
                                     p.getUserID() + "," +
                                     p.getName() + "," +
